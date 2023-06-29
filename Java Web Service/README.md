@@ -36,15 +36,15 @@
 
 2. Invoke addWin() → Score: Win = 1, Loss = 0
 
-<img width="500" alt="Invoke getScore()" src="/Java%20Web%20Service/assets/SOAP2.png">
+<img width="500" alt="Invoke addWin()" src="/Java%20Web%20Service/assets/SOAP2.png">
 
 3. Invoke addLoss() → Score: Win = 1, Loss = 1
 
-<img width="500" alt="Invoke getScore()" src="/Java%20Web%20Service/assets/SOAP3.png">
+<img width="500" alt="Invoke addLoss()" src="/Java%20Web%20Service/assets/SOAP3.png">
 
 4. Invoke addLoss() → Score: Win = 1, Loss = 2
 
-<img width="500" alt="Invoke getScore()" src="/Java%20Web%20Service/assets/SOAP4.png">
+<img width="500" alt="Invoke addLoss()" src="/Java%20Web%20Service/assets/SOAP4.png">
 
 5. Invoke getScore() → Score: Win = 1, Loss = 2
 
@@ -52,7 +52,7 @@
 
 6. Invoke resetScore() → Score: Win = 0, Loss = 0
 
-<img width="500" alt="Invoke getScore()" src="/Java%20Web%20Service/assets/SOAP6.png">
+<img width="500" alt="Invoke resetScore()" src="/Java%20Web%20Service/assets/SOAP6.png">
 
 7. Invoke getScore() → Score: Win = 0, Loss = 0
 
