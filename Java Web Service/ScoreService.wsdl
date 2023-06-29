@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://scorewebservice" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://scorewebservice" xmlns:intf="http://scorewebservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://scorewebservice" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getScore">
+    <complexType/>
+   </element>
+   <element name="getScoreResponse">
+    <complexType>
+     <sequence>
+      <element name="getScoreReturn" type="impl:Score"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="Score">
+    <sequence>
+     <element name="wins" type="xsd:int"/>
+     <element name="losses" type="xsd:int"/>
+    </sequence>
+   </complexType>
+   <element name="resetScore">
+    <complexType/>
+   </element>
+   <element name="resetScoreResponse">
+    <complexType/>
+   </element>
+   <element name="addWin">
+    <complexType/>
+   </element>
+   <element name="addWinResponse">
+    <complexType>
+     <sequence>
+      <element name="addWinReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addLoss">
+    <complexType/>
+   </element>
+   <element name="addLossResponse">
+    <complexType>
+     <sequence>
+      <element name="addLossReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="addLossRequest">
+
+      <wsdl:part element="impl:addLoss" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addLossResponse">
+
+      <wsdl:part element="impl:addLossResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="resetScoreResponse">
+
+      <wsdl:part element="impl:resetScoreResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addWinRequest">
+
+      <wsdl:part element="impl:addWin" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="resetScoreRequest">
+
+      <wsdl:part element="impl:resetScore" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getScoreResponse">
+
+      <wsdl:part element="impl:getScoreResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addWinResponse">
+
+      <wsdl:part element="impl:addWinResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getScoreRequest">
+
+      <wsdl:part element="impl:getScore" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="ScoreService">
+
+      <wsdl:operation name="getScore">
+
+         <wsdl:input message="impl:getScoreRequest" name="getScoreRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getScoreResponse" name="getScoreResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="resetScore">
+
+         <wsdl:input message="impl:resetScoreRequest" name="resetScoreRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:resetScoreResponse" name="resetScoreResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addWin">
+
+         <wsdl:input message="impl:addWinRequest" name="addWinRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addWinResponse" name="addWinResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addLoss">
+
+         <wsdl:input message="impl:addLossRequest" name="addLossRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addLossResponse" name="addLossResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ScoreServiceSoapBinding" type="impl:ScoreService">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getScore">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getScoreRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getScoreResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="resetScore">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="resetScoreRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="resetScoreResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addWin">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addWinRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addWinResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addLoss">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addLossRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addLossResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ScoreServiceService">
+
+      <wsdl:port binding="impl:ScoreServiceSoapBinding" name="ScoreService">
+
+         <wsdlsoap:address location="http://localhost:8080/WebServiceProject/services/ScoreService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
